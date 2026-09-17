@@ -857,3 +857,573 @@ footer {
     font-weight: 700;
     letter-spacing: -0.5px;
 }
+
+/* =========================================
+   FINAL DARK NAVY + CYAN TECH THEME
+   ========================================= */
+
+:root {
+    --bg-main: #0B0F14;
+    --bg-section: #10161D;
+    --bg-card: #151D26;
+    --bg-card-hover: #19232E;
+    --text-main: #F5F7FA;
+    --text-secondary: #A7B0BC;
+    --text-muted: #7F8A98;
+    --accent: #00E5FF;
+    --accent-hover: #22D3EE;
+    --border: #263241;
+    --border-light: #344252;
+}
+
+
+/* ===== GLOBAL ===== */
+
+html {
+    background: var(--bg-main);
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+}
+
+::selection {
+    background: var(--accent);
+    color: #071014;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    background: rgba(11, 15, 20, 0.92);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    color: var(--text-main);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav a {
+    color: var(--text-secondary);
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent);
+}
+
+.menu-btn {
+    color: var(--text-main);
+}
+
+
+/* ===== ALL MAIN SECTIONS ===== */
+
+.section,
+.hero,
+.research-section,
+.contact-section,
+.github-section {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.section {
+    border-color: var(--border);
+}
+
+
+/* ===== HERO ===== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 78% 35%,
+            rgba(0, 229, 255, 0.08),
+            transparent 32%
+        ),
+        var(--bg-main);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(
+            rgba(0, 229, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 229, 255, 0.025) 1px,
+            transparent 1px
+        );
+    background-size: 50px 50px;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+}
+
+.small-title {
+    color: var(--accent);
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+    color: var(--text-main);
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero h2 span {
+    color: var(--text-muted);
+}
+
+.hero-text {
+    color: var(--text-secondary);
+}
+
+
+/* ===== BUTTONS ===== */
+
+.btn {
+    border-color: var(--accent);
+    color: var(--text-main);
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #071014;
+    border-color: var(--accent);
+}
+
+.btn.primary:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: var(--text-main);
+}
+
+.btn.secondary:hover {
+    background: var(--accent);
+    color: #071014;
+    border-color: var(--accent);
+}
+
+
+/* ===== SOCIAL LINKS ===== */
+
+.social-links a {
+    color: var(--text-main);
+    border-color: var(--accent);
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+
+/* ===== HERO IMAGE ===== */
+
+.image-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.floating-card {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+}
+
+.floating-card span {
+    color: var(--text-muted);
+}
+
+
+/* ===== SECTION TITLES ===== */
+
+.section-title > p,
+.section-label {
+    color: var(--accent);
+}
+
+.section-title h2 {
+    color: var(--text-main);
+}
+
+.section-title h2 span,
+.research-grid h2 span,
+.github-section h2 span {
+    color: var(--accent);
+}
+
+.section-description {
+    color: var(--text-secondary);
+}
+
+
+/* ===== ABOUT ===== */
+
+.about-text p {
+    color: var(--text-secondary);
+}
+
+
+/* Education / Specialization / Interest / Focus grid */
+.about-info {
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.info-card {
+    background: var(--bg-card) !important;
+    color: var(--text-main);
+    padding: 30px;
+}
+
+.info-card span {
+    color: var(--accent);
+}
+
+.info-card strong {
+    color: var(--text-main);
+}
+
+.info-card p {
+    color: var(--text-secondary);
+}
+
+
+/* ===== DARK SECTION / SKILLS ===== */
+
+.dark-section {
+    background: #080C10;
+    color: var(--text-main);
+}
+
+.dark-section .section-title > p {
+    color: var(--accent);
+}
+
+.dark-section .section-title h2 span {
+    color: var(--accent);
+}
+
+.skills-grid {
+    background: var(--border);
+}
+
+.skill-card {
+    background: #0D131A;
+    color: var(--text-main);
+}
+
+.skill-number {
+    color: var(--text-muted);
+}
+
+.skill-card h3 {
+    color: var(--text-main);
+}
+
+.tags span {
+    background: rgba(0, 229, 255, 0.06);
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    color: var(--accent);
+}
+
+
+/* ===== PROJECTS ===== */
+
+.projects-grid {
+    background: transparent;
+}
+
+.project-card {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.07);
+}
+
+.project-index,
+.project-type {
+    color: var(--text-muted);
+}
+
+.project-card h3 {
+    color: var(--text-main);
+}
+
+.project-card p {
+    color: var(--text-secondary);
+}
+
+
+/* Project technology boxes */
+.project-tech {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.project-tech span {
+    background: rgba(0, 229, 255, 0.06) !important;
+    color: var(--accent) !important;
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.project-tech span:hover {
+    background: var(--accent) !important;
+    color: #071014 !important;
+    border-color: var(--accent);
+}
+
+.project-link {
+    color: var(--text-main);
+}
+
+.project-link:hover {
+    color: var(--accent);
+}
+
+
+/* GitHub project card */
+.github-card {
+    background: #080C10;
+    color: var(--text-main);
+    border-color: var(--border);
+}
+
+.github-card p {
+    color: var(--text-secondary);
+}
+
+.github-card .project-link {
+    color: var(--accent);
+}
+
+
+/* Project brand/logo */
+.project-brand span {
+    color: var(--text-main);
+}
+
+
+/* ===== RESEARCH ===== */
+
+.research-section {
+    background: var(--bg-section);
+    color: var(--text-main);
+}
+
+.research-grid h2 {
+    color: var(--text-main);
+}
+
+.research-content > p {
+    color: var(--text-secondary);
+}
+
+.research-content strong {
+    color: var(--text-main);
+}
+
+.research-points {
+    background: var(--border);
+}
+
+.research-points div {
+    background: var(--bg-card);
+    color: var(--text-main);
+}
+
+.research-points strong {
+    color: var(--accent);
+}
+
+.research-points span {
+    color: var(--text-main);
+}
+
+
+/* ===== CERTIFICATES ===== */
+
+.certificate-box {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.certificate-box span {
+    color: var(--accent);
+}
+
+.certificate-box h3 {
+    color: var(--text-main);
+}
+
+
+/* ===== GITHUB ===== */
+
+.github-section {
+    background: var(--bg-main);
+    color: var(--text-main);
+}
+
+.github-section > div > p {
+    color: var(--accent);
+}
+
+.github-section h2 {
+    color: var(--text-main);
+}
+
+.github-button {
+    border: 1px solid var(--accent);
+    color: var(--text-main);
+}
+
+.github-button:hover {
+    background: var(--accent);
+    color: #071014;
+}
+
+
+/* ===== CONTACT ===== */
+
+.contact-section {
+    border-top: 1px solid var(--border);
+}
+
+.contact-text {
+    color: var(--text-secondary);
+}
+
+.contact-links a {
+    color: var(--text-main);
+    border-color: var(--accent);
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+}
+
+
+/* ===== FORM ===== */
+
+input,
+textarea {
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-muted);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+}
+
+form button {
+    background: var(--accent);
+    color: #071014;
+    border: 1px solid var(--accent);
+}
+
+form button:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #080C10;
+    color: var(--text-main);
+    border-top: 1px solid var(--border);
+}
+
+.footer-content p {
+    color: var(--text-muted);
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+
+/* ===== MOBILE NAVBAR ===== */
+
+@media (max-width: 850px) {
+    nav {
+        background: rgba(11, 15, 20, 0.98);
+        border-bottom: 1px solid var(--border);
+    }
+}
+
+
+/* ===== EXTRA TAG COMPATIBILITY ===== */
+
+.project-card .tag,
+.project-card .tech-tag,
+.project-card .tags span,
+.project-card .tech-stack span,
+.project-tags span,
+.tech-stack span {
+    background: rgba(0, 229, 255, 0.06) !important;
+    color: var(--accent) !important;
+    border: 1px solid rgba(0, 229, 255, 0.35);
+}
+
+.project-card .tag:hover,
+.project-card .tech-tag:hover,
+.project-card .tags span:hover,
+.project-card .tech-stack span:hover,
+.project-tags span:hover,
+.tech-stack span:hover {
+    background: var(--accent) !important;
+    color: #071014 !important;
+    border-color: var(--accent);
+}
