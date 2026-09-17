@@ -60,19 +60,60 @@ window.addEventListener("scroll", () => {
 
 
 // =========================
-// CONTACT FORM
+// CONTACT FORM - FORMSPREE
 // =========================
 
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", function(event) {
+if (contactForm) {
 
-    event.preventDefault();
+    contactForm.addEventListener("submit", async function(event) {
 
-    alert(
-        "Thank you for your message! Please connect with me through LinkedIn or GitHub."
-    );
+        event.preventDefault();
 
-    contactForm.reset();
+        const submitButton = contactForm.querySelector("button[type='submit']");
 
-});
+        // Button ko temporarily disable karna
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        try {
+
+            const formData = new FormData(contactForm);
+
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+
+                alert("Thank you! Your message has been sent successfully.");
+
+                contactForm.reset();
+
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message →";
+
+            } else {
+
+                alert("Sorry, your message could not be sent. Please try again.");
+
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message →";
+            }
+
+        } catch (error) {
+
+            alert("Something went wrong. Please try again.");
+
+            submitButton.disabled = false;
+            submitButton.textContent = "Send Message →";
+        }
+
+    });
+
+}
