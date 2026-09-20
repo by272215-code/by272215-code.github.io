@@ -1427,3 +1427,21 @@ footer {
     color: #071014 !important;
     border-color: var(--accent);
 }
+
+
+/* Portfolio Builder Buttons */
+
+.project-card .project-link {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.project-card .project-link:first-of-type {
+    margin-top: 18px;
+}
+
+.project-card .project-link + .project-link {
+    margin-top: 8px;
+}
